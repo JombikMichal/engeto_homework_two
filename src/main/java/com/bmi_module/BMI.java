@@ -1,5 +1,6 @@
 package com.bmi_module;
 
+import com.bmi_module.display.*;
 import com.calculator_module.calculator.CalculatorHolder;
 import com.calculator_module.operands.Operands;
 
@@ -7,7 +8,7 @@ public class BMI {
     private final double weight;
     private final double height;
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
-  
+
     public BMI(double weight, double height) {
         this.weight = weight;
         this.height = height;
@@ -17,20 +18,20 @@ public class BMI {
         return calculatorHolder.calculate(new Operands(weight, calculatorHolder.calculate(new Operands(height,2),'^')),'/');
     }
 
-    public String getBMI(){
+    public DisplayBMIResult getBMI(){
         double bmi = calculateBMI();
-        if (bmi < 18.5){
-            return "Podvýživa";
-        }else if (bmi >= 18.5 && bmi < 25){
-            return "Zdravá váha";
-        }else if (bmi <= 25 && bmi < 30){
-            return "Mírná nadváha";
-        }else if (bmi <= 30 && bmi < 40){
-            return "Obezita";
-        }else if (bmi >= 40){
-            return "Těžká obezita";
+        if (bmi > 0 && bmi < 18.5d){
+            return new Malnutrition();
+        }else if (bmi >= 18.5d && bmi < 25d){
+            return new SlightOverweight();
+        }else if (bmi >= 25d && bmi < 30d){
+            return new HealthyWeight();
+        }else if (bmi >= 30d && bmi < 40d){
+            return new Obesity();
+        }else if (bmi >= 40d){
+            return new HealthyWeight();
         }else {
-            return null;
+            throw new ArithmeticException("You set bad parameters because your BMI is less than zero or equals zero!!!");
         }
     }
 }
