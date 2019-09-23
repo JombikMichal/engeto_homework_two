@@ -1,5 +1,4 @@
 import com.bmi_module.BMI;
-import com.calculator_module.calculator.CalculatorHolder;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -7,8 +7,7 @@ public class BMI {
     private final double weight;
     private final double height;
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
-    Operands operands = new Operands();
-
+  
     public BMI(double weight, double height) {
         this.weight = weight;
         this.height = height;

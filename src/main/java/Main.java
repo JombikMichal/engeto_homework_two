@@ -4,7 +4,7 @@ import com.calculator_module.calculator.CalculatorHolder;
 public class Main {
     public static void main(String[] args) {
         CalculatorHolder calculatorHolder = new CalculatorHolder();
-        BMI bmi = new BMI(50,1.86);
+        BMI bmi = new BMI(150,1.86);
 
         int a = 10;
         int b = 5;
