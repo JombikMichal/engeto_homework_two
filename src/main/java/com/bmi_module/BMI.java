@@ -31,7 +31,7 @@ public class BMI {
         }else if (bmi >= 40d){
             return new HealthyWeight();
         }else {
-            throw new ArithmeticException("You set bad parameters because your BMI is less than zero or equals zero!!!");
+            throw new ArithmeticException("You set wrong parameters because your BMI is less than zero or equals zero!!!");
         }
     }
 }
