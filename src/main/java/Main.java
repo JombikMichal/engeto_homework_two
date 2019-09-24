@@ -12,15 +12,18 @@ public class Main {
 
 //        TwoDimensionObjects twoDimensionObjects = new Rectangle("Recangle", 5,6);
 
-        TwoDimensionObjects twoDimensionObjects = new Triangle("Triangle", 4,4,4);
+
+
+        TwoDimensionObjects twoDimensionObjects = new Triangle("Triangle", 5,4,5);
         System.out.println(twoDimensionObjects.calculateContent());
         System.out.println(twoDimensionObjects.calculateCircuit());
+        System.out.println(twoDimensionObjects.getType());
 
 
 
-        BMI bmi = new BMI(150,1.86);
-
-        bmi.getBMI().display(bmi);
+//        BMI bmi = new BMI(150,1.86);
+//
+//        bmi.getBMI().display(bmi);
 
 
     }

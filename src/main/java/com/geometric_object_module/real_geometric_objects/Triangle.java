@@ -9,25 +9,54 @@ import java.util.Arrays;
 
 public class Triangle extends TwoDimensionObjects {
 
+    private String type;
     private final double sideA;
     private final double sideB;
     private final double sideC;
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
     private Helper helper = new Helper();
+    private double[] sortedSides;
 
     public Triangle(String type, double sideA, double sideB, double sideC) {
         super(type);
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
+        initialize();
+    }
+
+    private void initialize(){
+        sortSides();
         validate();
+        setType();
+    }
+
+    private void sortSides(){
+        double[] sides = {sideA,sideB,sideC};
+        Arrays.sort(sides);
+        this.sortedSides =  sides;
     }
 
     private void validate() throws IllegalArgumentException{
-        double[] sides = {sideA,sideB,sideC};
-        Arrays.sort(sides);
-        if( calculatorHolder.calculate(new Operands(this.sideA,this.sideB),'+') < this.sideC){
+        if( calculatorHolder.calculate(new Operands(this.sortedSides[0],this.sortedSides[1]),'+') < this.sideC){
             throw new IllegalArgumentException("This object is not triangle because sum of two smaller sides is less than the biggest side!");
+        }
+    }
+
+    @Override
+    public String getType() {
+        return type;
+    }
+
+    private void setType() throws IllegalArgumentException{
+        if (this.sortedSides[0] == this.sortedSides[1] && this.sortedSides[1] == this.sortedSides[2]){
+            this.type = "Equilateral triangle";
+        }else if (this.sortedSides[0] == this.sortedSides[1] || this.sortedSides[1] == this.sortedSides[2]){
+            this.type = "Isosceles triangle";
+        }else if (this.sortedSides[0] != this.sortedSides[1] && this.sortedSides[1] != this.sortedSides[2]){
+            this.type = "General triangle";
+        }else {
+            throw new IllegalArgumentException("This is no triangle! This is some bullshit");
         }
     }
 
