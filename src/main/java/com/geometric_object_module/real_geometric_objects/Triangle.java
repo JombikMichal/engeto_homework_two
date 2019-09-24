@@ -40,6 +40,8 @@ public class Triangle extends TwoDimensionObjects {
     private void validate() throws IllegalArgumentException{
         if( calculatorHolder.calculate(new Operands(this.sortedSides[0],this.sortedSides[1]),'+') < this.sideC){
             throw new IllegalArgumentException("This object is not triangle because sum of two smaller sides is less than the biggest side!");
+        }else if (sideA == 0 || sideB == 0 || sideC == 0){
+            throw new IllegalArgumentException("You set wrong input parameters because one of the sides is less than zero or equals zero");
         }
     }
 

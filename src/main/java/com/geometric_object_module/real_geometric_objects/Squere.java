@@ -12,6 +12,14 @@ public class Squere extends TwoDimensionObjects {
     public Squere(String type, double sideA) {
         super(type);
         this.sideA = sideA;
+        validate();
+    }
+
+
+    private void validate() throws IllegalArgumentException{
+        if(this.sideA <= 0){
+            throw new IllegalArgumentException("You set wrong input parameter because side is less than zero or equals zero");
+        }
     }
 
     @Override

@@ -20,6 +20,8 @@ public class Rectangle extends TwoDimensionObjects {
     private void validate() throws IllegalArgumentException{
         if (sideA == sideB){
             throw new IllegalArgumentException("side A is equal side B! This is no rectangle but this is squere!");
+        }else if (sideA == 0 || sideB == 0){
+            throw new IllegalArgumentException("You set wrong input parameters because one of the sides is less than zero or equals zero");
         }
     }
 

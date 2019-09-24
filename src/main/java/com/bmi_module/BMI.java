@@ -5,8 +5,6 @@ import com.bmi_module.display.*;
 import com.calculator_module.calculator.CalculatorHolder;
 import com.calculator_module.operands.Operands;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 public class BMI {
     private final double weight;
