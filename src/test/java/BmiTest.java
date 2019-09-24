@@ -1,6 +1,6 @@
 import com.bmi_module.BMI;
 import com.bmi_module.display.DisplayBMIResult;
-import com.bmi_module.display.HealthyWeight;
+import com.bmi_module.display.HeavyObesity;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -11,7 +11,7 @@ public class BmiTest {
     @Test
     public void bmiTesDone(){
         DisplayBMIResult result = bmi.getBMI();
-        DisplayBMIResult expectedResult = new HealthyWeight();
+        DisplayBMIResult expectedResult = new HeavyObesity();
         Assert.assertEquals(expectedResult.getClass(),result.getClass());
     }
 

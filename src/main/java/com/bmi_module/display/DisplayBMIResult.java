@@ -1,5 +1,7 @@
 package com.bmi_module.display;
 
+import com.bmi_module.BMI;
+
 public interface DisplayBMIResult {
-    void display();
+    void display(BMI bmi);
 }
