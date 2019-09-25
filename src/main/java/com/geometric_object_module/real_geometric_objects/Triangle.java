@@ -4,7 +4,9 @@ import com.Helper;
 import com.calculator_module.calculator.CalculatorHolder;
 import com.calculator_module.operands.Operands;
 import com.geometric_object_module.TwoDimensionObjects;
+import org.w3c.dom.css.Rect;
 
+import java.awt.*;
 import java.util.Arrays;
 
 public class Triangle extends TwoDimensionObjects {
@@ -44,6 +46,7 @@ public class Triangle extends TwoDimensionObjects {
             throw new IllegalArgumentException("You set wrong input parameters because one of the sides is less than zero or equals zero");
         }
     }
+
 
     @Override
     public String getType() {

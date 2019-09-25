@@ -1,6 +1,10 @@
 package com.geometric_object_module.real_geometric_objects;
 
-public class PythagorasTheorem {
+import javax.swing.*;
+import java.awt.*;
+
+public class PythagorasTheorem extends JPanel {
+
     private final double sideA;
     private final double sideB;
 
