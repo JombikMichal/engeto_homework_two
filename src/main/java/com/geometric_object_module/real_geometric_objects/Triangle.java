@@ -4,6 +4,8 @@ import com.Helper;
 import com.calculator_module.calculator.CalculatorHolder;
 import com.calculator_module.operands.Operands;
 import com.geometric_object_module.TwoDimensionObjects;
+import com.geometric_object_module.display.DisplayAble;
+import com.geometric_object_module.display.DisplayTwoDimens;
 import org.w3c.dom.css.Rect;
 
 import java.awt.*;
@@ -18,8 +20,9 @@ public class Triangle extends TwoDimensionObjects {
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
     private Helper helper = new Helper();
     private double[] sortedSides;
+    private DisplayAble displayAble;
 
-    public Triangle(String type, double sideA, double sideB, double sideC) {
+    public Triangle(String type, double sideA, double sideB, double sideC)  {
         super(type);
         this.sideA = sideA;
         this.sideB = sideB;
@@ -27,10 +30,16 @@ public class Triangle extends TwoDimensionObjects {
         initialize();
     }
 
+    @Override
+    public void display() {
+        this.displayAble.display();
+    }
+
     private void initialize(){
         sortSides();
         validate();
         setType();
+        this.displayAble = new DisplayTwoDimens(this);
     }
 
     private void sortSides(){

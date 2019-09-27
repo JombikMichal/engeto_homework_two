@@ -16,4 +16,9 @@ public class Ellipse extends TwoDimensionObjects {
     public double calculateCircuit() {
         return 0;
     }
+
+    @Override
+    public void display() {
+
+    }
 }

@@ -1,12 +1,14 @@
 package com.calculator_module.operations;
 
 public class Division  implements Operation{
+    double result;
     @Override
     public double calculate(double left, double right) {
-        if (Double.isInfinite(left / right)) {
-            throw new ArithmeticException("You can not divide by zero!");
+        try {
+             result = left / right;
+        } catch (ArithmeticException e) {
+            e.printStackTrace();
         }
-        return left / right;
-
+        return result;
     }
 }

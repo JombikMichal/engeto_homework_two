@@ -1,8 +1,12 @@
 package com.geometric_object_module.real_geometric_objects;
 
+import com.Helper;
 import com.calculator_module.calculator.CalculatorHolder;
 import com.calculator_module.operands.Operands;
 import com.geometric_object_module.ThreeDimensionObjects;
+import com.geometric_object_module.display.DisplayAble;
+import com.geometric_object_module.display.DisplayThreeDimens;
+import com.project_exceptions.InputIsZero;
 
 public class Block extends ThreeDimensionObjects {
 
@@ -10,22 +14,31 @@ public class Block extends ThreeDimensionObjects {
     private final double sideB;
     private final double height;
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
+    private Helper helper = new Helper();
+    private DisplayAble displayAble;
 
     public Block(String type, double sideA, double sideB, double height) {
         super(type);
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
-        validate();
+        //validate();
+        this.displayAble = new DisplayThreeDimens(this);
     }
 
-    private void validate() throws IllegalArgumentException{
-        if(this.sideA <= 0 || this.sideB <= 0 || this.height <= 0){
-            throw new IllegalArgumentException("You set wrong input parameter because side is less than zero or equals zero");
+    private void validate() throws Exception{
+        double sides[] = {this.sideA,this.sideB,this.height};
+        if (this.helper.validate(sides)){
+            throw new InputIsZero();
         }
         if(this.sideA == this.sideB && this.sideB == this.height){
             throw new IllegalArgumentException("This is no Block but this is  Dice");
         }
+    }
+
+    @Override
+    public void display() {
+        this.displayAble.display();
     }
 
     @Override

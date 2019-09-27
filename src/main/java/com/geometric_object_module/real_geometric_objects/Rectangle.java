@@ -3,6 +3,8 @@ package com.geometric_object_module.real_geometric_objects;
 import com.calculator_module.calculator.CalculatorHolder;
 import com.calculator_module.operands.Operands;
 import com.geometric_object_module.TwoDimensionObjects;
+import com.geometric_object_module.display.DisplayAble;
+import com.geometric_object_module.display.DisplayTwoDimens;
 import com.geometric_object_module.drawing.Draw;
 import com.geometric_object_module.drawing.DrawRectangle;
 
@@ -12,6 +14,7 @@ public class Rectangle extends TwoDimensionObjects {
     private final double sideB;
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
     private String type;
+    private DisplayAble displayAble;
 
     public Rectangle(String type, double sideA, double sideB) {
         super(type);
@@ -19,6 +22,7 @@ public class Rectangle extends TwoDimensionObjects {
         this.sideA = sideA;
         this.sideB = sideB;
         validate();
+        this.displayAble = new DisplayTwoDimens(this);
     }
 
     @Override
@@ -27,8 +31,9 @@ public class Rectangle extends TwoDimensionObjects {
     }
 
     public void display(){
+        this.displayAble.display();
         Draw draw = new DrawRectangle(this);
-        draw.paint(null);
+       // draw.paint(null);
     }
 
     private void validate() throws IllegalArgumentException{

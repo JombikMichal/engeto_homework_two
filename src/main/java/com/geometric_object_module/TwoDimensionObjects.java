@@ -9,4 +9,5 @@ public abstract class TwoDimensionObjects extends GeometricObject{
 
     public abstract double calculateContent();
     public abstract double calculateCircuit();
+    public abstract void display();
 }

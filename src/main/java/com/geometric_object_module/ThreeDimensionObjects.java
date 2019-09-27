@@ -8,4 +8,5 @@ public abstract class ThreeDimensionObjects extends GeometricObject{
 
     public abstract double calculateVolume();
     public abstract double calculateSurface();
+    public abstract void display();
 }

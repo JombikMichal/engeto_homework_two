@@ -3,6 +3,8 @@ package com.geometric_object_module.real_geometric_objects;
 import com.calculator_module.calculator.CalculatorHolder;
 import com.calculator_module.operands.Operands;
 import com.geometric_object_module.TwoDimensionObjects;
+import com.geometric_object_module.display.DisplayAble;
+import com.geometric_object_module.display.DisplayTwoDimens;
 import com.geometric_object_module.drawing.Draw;
 import com.geometric_object_module.drawing.DrawRectangle;
 import com.geometric_object_module.drawing.DrawSquere;
@@ -12,12 +14,14 @@ public class Squere extends TwoDimensionObjects {
     private final double sideA;
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
     private String type;
+    private DisplayAble displayAble;
 
     public Squere(String type, double sideA) {
         super(type);
         this.type = type;
         this.sideA = sideA;
         validate();
+        displayAble = new DisplayTwoDimens(this);
     }
 
     @Override
@@ -26,9 +30,11 @@ public class Squere extends TwoDimensionObjects {
     }
 
 
+    @Override
     public void display(){
+        this.displayAble.display();
         Draw draw = new DrawSquere(this);
-        draw.paint(null);
+       // draw.paint(null);
     }
 
     private void validate() throws IllegalArgumentException{
