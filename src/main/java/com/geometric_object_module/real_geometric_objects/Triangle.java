@@ -49,7 +49,7 @@ public class Triangle extends TwoDimensionObjects {
         Arrays.sort(sides);
         this.sortedSides =  sides;
     }
-    
+
     private void validate() throws IllegalArgumentException{
         double sides[] = {this.sideA,this.sideB,this.sideC};
         if (this.helper.validate(sides)){

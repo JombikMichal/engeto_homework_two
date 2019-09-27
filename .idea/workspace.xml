@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb12cbcd-881f-463f-b792-a4eee9c9d80c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Dice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Squere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Squere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project_exceptions/BadParamsForGeoObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project_exceptions/BadParamsForGeoObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project_exceptions/InputIsZero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project_exceptions/InputIsZero.java" afterDir="false" />
-    </list>
+    <list default="true" id="eb12cbcd-881f-463f-b792-a4eee9c9d80c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+            <state relative-caret-position="398">
+              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1346#1347#0" expanded="true" />
@@ -63,10 +55,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Squere.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Triangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+            <state relative-caret-position="437">
+              <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Rectangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+            <state relative-caret-position="415">
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,17 +160,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/display/DisplayThreeDimens.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/display/DisplayTwoDimens.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Triangle.java" />
         <option value="$PROJECT_DIR$/src/test/java/GeometricObjectsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/calculator_module/operations/Division.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/Helper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/project_exceptions/InputIsZero.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Circle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Dice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Block.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/project_exceptions/BadParamsForGeoObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Block.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Squere.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Triangle.java" />
       </list>
     </option>
   </component>
@@ -786,16 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Triangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/calculator_module/operations/Division.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -856,24 +838,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+        <state relative-caret-position="415">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Block.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Squere.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="163">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1346#1347#0" expanded="true" />
-            <element signature="e#1388#1389#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -889,10 +881,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Squere.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/geometric_object_module/real_geometric_objects/Triangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="437">
+          <caret line="54" column="41" lean-forward="true" selection-start-line="54" selection-start-column="41" selection-end-line="54" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
