@@ -1,5 +1,6 @@
 package com.geometric_object_module.real_geometric_objects;
 
+import com.Helper;
 import com.calculator_module.calculator.CalculatorHolder;
 import com.calculator_module.operands.Operands;
 import com.geometric_object_module.TwoDimensionObjects;
@@ -7,12 +8,15 @@ import com.geometric_object_module.display.DisplayAble;
 import com.geometric_object_module.display.DisplayTwoDimens;
 import com.geometric_object_module.drawing.Draw;
 import com.geometric_object_module.drawing.DrawRectangle;
+import com.project_exceptions.BadParamsForGeoObject;
+import com.project_exceptions.InputIsZero;
 
 public class Rectangle extends TwoDimensionObjects {
 
     private final double sideA;
     private final double sideB;
     private CalculatorHolder calculatorHolder = new CalculatorHolder();
+    private Helper helper = new Helper();
     private String type;
     private DisplayAble displayAble;
 
@@ -37,10 +41,12 @@ public class Rectangle extends TwoDimensionObjects {
     }
 
     private void validate() throws IllegalArgumentException{
+        double sides[] = {this.sideA,this.sideB};
+        if (this.helper.validate(sides)){
+            throw new InputIsZero();
+        }
         if (sideA == sideB){
-            throw new IllegalArgumentException("side A is equal side B! This is no rectangle but this is squere!");
-        }else if (sideA == 0 || sideB == 0){
-            throw new IllegalArgumentException("You set wrong input parameters because one of the sides is less than zero or equals zero");
+            throw new BadParamsForGeoObject();
         }
     }
 

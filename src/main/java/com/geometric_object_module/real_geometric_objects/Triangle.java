@@ -6,6 +6,8 @@ import com.calculator_module.operands.Operands;
 import com.geometric_object_module.TwoDimensionObjects;
 import com.geometric_object_module.display.DisplayAble;
 import com.geometric_object_module.display.DisplayTwoDimens;
+import com.project_exceptions.BadParamsForGeoObject;
+import com.project_exceptions.InputIsZero;
 import org.w3c.dom.css.Rect;
 
 import java.awt.*;
@@ -47,12 +49,14 @@ public class Triangle extends TwoDimensionObjects {
         Arrays.sort(sides);
         this.sortedSides =  sides;
     }
-
+    
     private void validate() throws IllegalArgumentException{
-        if( calculatorHolder.calculate(new Operands(this.sortedSides[0],this.sortedSides[1]),'+') < this.sideC){
-            throw new IllegalArgumentException("This object is not triangle because sum of two smaller sides is less than the biggest side!");
-        }else if (sideA == 0 || sideB == 0 || sideC == 0){
-            throw new IllegalArgumentException("You set wrong input parameters because one of the sides is less than zero or equals zero");
+        double sides[] = {this.sideA,this.sideB,this.sideC};
+        if (this.helper.validate(sides)){
+            throw new InputIsZero();
+        }
+        if(calculatorHolder.calculate(new Operands(this.sortedSides[0],this.sortedSides[1]),'+') < this.sideC){
+            throw new BadParamsForGeoObject();
         }
     }
 

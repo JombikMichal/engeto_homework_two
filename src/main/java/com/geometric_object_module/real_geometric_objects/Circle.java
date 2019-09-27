@@ -19,11 +19,11 @@ public class Circle extends TwoDimensionObjects {
         super(type);
         this.radius = radius;
         this.calculatorHolder = new CalculatorHolder();
-        //validate();
+        validate();
         this.displayAble = new DisplayTwoDimens(this);
     }
 
-    private void validate() throws Exception{
+    private void validate() throws IllegalArgumentException{
         double sides[] = {this.radius};
         if (this.helper.validate(sides)){
             throw new InputIsZero();

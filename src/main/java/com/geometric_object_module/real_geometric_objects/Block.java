@@ -6,6 +6,7 @@ import com.calculator_module.operands.Operands;
 import com.geometric_object_module.ThreeDimensionObjects;
 import com.geometric_object_module.display.DisplayAble;
 import com.geometric_object_module.display.DisplayThreeDimens;
+import com.project_exceptions.BadParamsForGeoObject;
 import com.project_exceptions.InputIsZero;
 
 public class Block extends ThreeDimensionObjects {
@@ -22,17 +23,14 @@ public class Block extends ThreeDimensionObjects {
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
-        //validate();
+        validate();
         this.displayAble = new DisplayThreeDimens(this);
     }
 
-    private void validate() throws Exception{
+    private void validate() throws IllegalArgumentException{
         double sides[] = {this.sideA,this.sideB,this.height};
         if (this.helper.validate(sides)){
             throw new InputIsZero();
-        }
-        if(this.sideA == this.sideB && this.sideB == this.height){
-            throw new IllegalArgumentException("This is no Block but this is  Dice");
         }
     }
 
