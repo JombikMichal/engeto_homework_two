@@ -19,6 +19,7 @@ public class Main {
         squere.display();
 
 
+
 //        BMI bmi = new BMI(150,1.86);
 //
 //        bmi.getBMI().display(bmi);

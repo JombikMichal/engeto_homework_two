@@ -15,13 +15,13 @@ import com.project_exceptions.InputIsZero;
 public class Squere extends TwoDimensionObjects {
 
     private final double sideA;
-    private CalculatorHolder calculatorHolder = new CalculatorHolder();
-    private Helper helper = new Helper();
+    private CalculatorHolder calculatorHolder;
     private String type;
     private DisplayAble displayAble;
 
     public Squere(String type, double sideA) {
         super(type);
+        calculatorHolder = new CalculatorHolder();
         this.type = type;
         this.sideA = sideA;
         validate();
@@ -43,7 +43,7 @@ public class Squere extends TwoDimensionObjects {
 
     private void validate() throws IllegalArgumentException{
         double sides[] = {this.sideA};
-        if (this.helper.validate(sides)){
+        if (Helper.validate(sides)){
             throw new InputIsZero();
         }
     }

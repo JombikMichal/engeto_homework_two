@@ -14,16 +14,12 @@ public class Helper {
         return new BigDecimal(val.toString()).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
 
-    public boolean validate(double[] inputs) {
-       try {
-           for (int i= 0; i < inputs.length; i++){
-               if(i == 0){
-                   return false;
-               }
-           }
-       }catch (Exception e){
-           e.getStackTrace();
-       }
+    public static boolean validate(double[] inputs) {
+        for (int i = 0; i < inputs.length; i++) {
+            if (i == 0) {
+                return false;
+            }
+        }
         return true;
     }
 }

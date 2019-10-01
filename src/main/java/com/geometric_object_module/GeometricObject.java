@@ -10,4 +10,6 @@ public abstract class GeometricObject {
     public String getType() {
         return type;
     }
+
+
 }
