@@ -9,11 +9,5 @@ public class Division  implements Operation{
         }
         return left / right;
 
-//        try {
-//             result = left / right;
-//        } catch (IllegalArgumentException e) {
-//            e.printStackTrace();
-//        }
-//        return result;
     }
 }
