@@ -14,7 +14,11 @@ public class Helper {
         return new BigDecimal(val.toString()).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
 
-    public static boolean validate(double[] inputs) {
+//    private long getCorrectAnsCount(){
+//        return answers.stream().filter(answer -> answer.isCorrect()).count();
+//    }
+
+    public static boolean validate(double... inputs) {
         for (int i = 0; i < inputs.length; i++) {
             if (i == 0) {
                 return false;
